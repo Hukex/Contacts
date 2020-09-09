@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="271.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="k4fernandovera.FXMLDocumentController">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="Opciones 🔧">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleNewContact" text="Añadir Nuevo Contacto ☑" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleDeleteContact" text="Borrar Contacto ❌" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleShowContacts" text="Mostrar Agenda Ordenada ⏬" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Salir ❎" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Exportar ➡">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleSaveContactsFromBinaryFile" text="Guardar Agenda en binario ➡" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleSaveContactsTXT" text="Guardar Agenda en TXT ➡" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Importar ⬅">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleLoadContactsFromBinaryFile" text="Cargar Agenda desde archivo binario ⬅" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleLoadContactsTXT" text="Cargar Agenda desde TXT ⬅" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <AnchorPane fx:id="ap" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="boton" layoutX="94.0" layoutY="312.0" mnemonicParsing="false" text="Instrucciones" />
+                <Label alignment="CENTER" focusTraversable="false" layoutX="69.0" layoutY="60.0" prefHeight="41.0" prefWidth="177.0" text="👤NOMBRE" textAlignment="CENTER" textFill="#4599d6">
+                    <font>
+                        <Font name="Reem Kufi Regular" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nombre" layoutX="69.0" layoutY="105.0" prefHeight="41.0" prefWidth="177.0" promptText="👤Nombre">
+                    <font>
+                        <Font name="Reem Kufi Regular" size="15.0" />
+                    </font>
+                </TextField>
+                <Label alignment="CENTER" focusTraversable="false" layoutX="69.0" layoutY="148.0" prefHeight="41.0" prefWidth="177.0" text="📞TELEFONO" textAlignment="CENTER" textFill="#4599d6">
+                    <font>
+                        <Font name="Reem Kufi Regular" size="15.0" />
+                    </font>
+                </Label>    
+                <TextField fx:id="telefono" layoutX="69.0" layoutY="188.0" prefHeight="41.0" prefWidth="177.0" promptText="📞Telefono">
+                    <font>
+                        <Font name="Reem Kufi Regular" size="15.0" />
+                    </font>
+                </TextField>
+                <ListView fx:id="pru" focusTraversable="false" layoutX="15" layoutY="26.0" onMouseClicked="#handleClick" prefHeight="356.0" prefWidth="306.0" stylesheets="@style.css" />
+                <Label fx:id="label" alignment="CENTER" focusTraversable="false" layoutX="24.0" layoutY="6.0" prefHeight="20.0" prefWidth="265.0" textAlignment="CENTER" textFill="#4599d6">
+                    <font>
+                        <Font name="Reem Kufi Regular" size="14.0" />
+                    </font>
+                </Label>
+            <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleShowContacts" prefHeight="31.0" prefWidth="40.0" text="◀" textAlignment="CENTER" wrapText="true" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
