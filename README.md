@@ -67,6 +67,6 @@ It was for practice so it's done.
 
 # Contact📞
 
-My name is Fernando, you can contact me if you desire!
+My name is [Fernando](https://www.linkedin.com/in/fevm/), you can contact me if you desire!
 
 ## 😃 Thanks for reading. 👋
